@@ -14,7 +14,10 @@ Abrir [http://localhost:3000](http://localhost:3000) en cualquier navegador.
 ## Es un trabajo en proceso
 
 Las funciones basicas estan terminadas.
-Faltan agregar otras como  
- - Filtrar entre tareas terminadas/sin terminar. - Agregar subtareas a las tareas grandes. - Alguna otra feature que se me ocurra.
+Faltan agregar otras como
+
+- Filtrar entre tareas terminadas/sin terminar.
+- Agregar subtareas a las tareas grandes.
+- Alguna otra feature que se me ocurra.
 
 ### FSepulvedaDev
