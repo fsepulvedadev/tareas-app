@@ -4,11 +4,17 @@ Primeras interaciones de esta app de tareas, la idea es complejizarlo con el tie
 
 ## Para iniciar
 
-El en directorio del proyecto, ejecutar:
+En el directorio del proyecto, ejecutar:
 
 ### `npm start`
 
-Hicia la app en modo local
+Inicia la app en modo local
 Abrir [http://localhost:3000](http://localhost:3000) en cualquier navegador.
+
+## Es un trabajo en proceso
+
+Las funciones basicas estan terminadas.
+Faltan agregar otras como  
+ - Filtrar entre tareas terminadas/sin terminar. - Agregar subtareas a las tareas grandes. - Alguna otra feature que se me ocurra.
 
 ### FSepulvedaDev
