@@ -4,6 +4,15 @@ import List from "./components/List/List.jsx";
 import Addtask from "./components/AddTask/Addtask";
 
 function App() {
+  /* useEffect(() => {
+    if (tasks.tareas.length < 0) {
+      let data = JSON.parse(localStorage.getItem("Tareas"));
+      console.log(data);
+      setTasks({ tareas: [...tasks.tareas.concat(data)] });
+    } else {
+      return;
+    }
+  }, []); */
   const [tasks, setTasks] = useState({ tareas: [] });
   const [repetidos, setRepetidos] = useState(false);
   const [vacio, setVacio] = useState(false);
@@ -19,8 +28,9 @@ function App() {
 
   const handleSubmit = (data) => {
     let repetido = 0;
-    if (tasks.tareas.length <= 0) {
+    if (tasks.tareas.length <= 0 && data !== null) {
       setTasks({ tareas: [...tasks.tareas.concat(data)] });
+      localStorage.setItem("Tareas", JSON.stringify(tasks.tareas));
     } else {
       repetido = tasks.tareas.includes(data);
       if (repetido) {
@@ -28,6 +38,7 @@ function App() {
         setRepetidos(true);
       } else {
         setTasks({ tareas: [...tasks.tareas.concat(data)] });
+        localStorage.setItem("Tareas", JSON.stringify(tasks.tareas));
         setRepetidos(false);
       }
     }
@@ -37,7 +48,7 @@ function App() {
       if (tasks.tareas[i] === data) {
         tasks.tareas.splice(i, 1);
         setTasks({ tareas: tasks.tareas });
-
+        localStorage.setItem("Tareas", JSON.stringify(tasks.tareas));
         return;
       }
     }
@@ -54,6 +65,8 @@ function App() {
             handleDelete={handleDelete}
             repetido={repetidos}
             vacio={vacio}
+            handleVacio={handleVacio}
+            handleRepetido={setRepetidos}
           />
         </div>
       </div>

@@ -3,7 +3,6 @@ import React from "react";
 const Addtask = (props) => {
   const handleSubmitLocal = (e) => {
     e.preventDefault();
-    console.log(e.target[0].value);
     if (e.target[0].value === "" || e.target[0].value == null) {
       props.vacio(true);
       return;
@@ -15,6 +14,15 @@ const Addtask = (props) => {
     const input = document.getElementById("addtaskinput");
     input.value = "";
   };
+
+  /* const addToDo = (task) => {
+    const todo = {
+      id: Date.now(),
+      name: task,
+      completed: false,
+    };
+    props.submiter(todo);
+  }; */
   return (
     <>
       <form className="w-5/6 pt-6" onSubmit={handleSubmitLocal}>
