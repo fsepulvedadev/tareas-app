@@ -9,13 +9,13 @@ const Item = (props) => {
       <p className="text-left">{props.task} </p>
       <div className="flex -mr-8">
         <button
-          className="rounded text-indigo-600 bg-indigo-200 m-1 py-0.5 px-1.5"
+          className="my-1 text-indigo-600 rounded filter"
           onClick={props.deleteTask}
         >
           ❌
         </button>
         <button
-          className="rounded text-indigo-600 bg-indigo-200 m-1 py-0.5 px-1.5"
+          className="my-1 text-indigo-600 rounded filter "
           onClick={props.completeTask}
         >
           {" "}
